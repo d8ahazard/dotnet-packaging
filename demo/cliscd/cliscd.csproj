@@ -8,25 +8,25 @@
   </PropertyGroup>
 
   <PropertyGroup>
-    <!-- Create a Linux user named 'quamotion' -->
+    <!-- Create a Linux user named 'digitalhigh' -->
     <CreateUser>true</CreateUser>
-    <UserName>quamotion</UserName>
+    <UserName>digitalhigh</UserName>
   </PropertyGroup>
 
   <ItemGroup>
     <!-- Create a couple of folders we may user -->
-    <LinuxFolder Include="/var/log/quamotion" Group="quamotion" Owner="quamotion" RemoveOnUninstall="true" />
-    <LinuxFolder Include="/var/run/quamotion" Group="quamotion" Owner="quamotion" RemoveOnUninstall="true" />
-    <LinuxFolder Include="/var/lib/quamotion" Group="quamotion" Owner="quamotion" RemoveOnUninstall="true" />
-    <LinuxFolder Include="/etc/quamotion" Group="quamotion" Owner="quamotion" RemoveOnUninstall="true" />
+    <LinuxFolder Include="/var/log/digitalhigh" Group="digitalhigh" Owner="digitalhigh" RemoveOnUninstall="true" />
+    <LinuxFolder Include="/var/run/digitalhigh" Group="digitalhigh" Owner="digitalhigh" RemoveOnUninstall="true" />
+    <LinuxFolder Include="/var/lib/digitalhigh" Group="digitalhigh" Owner="digitalhigh" RemoveOnUninstall="true" />
+    <LinuxFolder Include="/etc/digitalhigh" Group="digitalhigh" Owner="digitalhigh" RemoveOnUninstall="true" />
   </ItemGroup>
   
   <ItemGroup>
     <Content Include="cliscd.machine.config" CopyToPublishDirectory="PreserveNewest">
-      <LinuxPath>/etc/quamotion/cliscd.machine.config</LinuxPath>
+      <LinuxPath>/etc/digitalhigh/cliscd.machine.config</LinuxPath>
     </Content>
     <Content Include="cliscd.user.config" CopyToPublishDirectory="PreserveNewest">
-      <LinuxPath>/home/quamotion/.cliscd/cliscd.user.config</LinuxPath>
+      <LinuxPath>/home/digitalhigh/.cliscd/cliscd.user.config</LinuxPath>
     </Content>
     <Content Include="readme.txt">
       <Documentation>true</Documentation>

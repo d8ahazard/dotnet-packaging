@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>netcoreapp3.1;net5.0;net6.0;net7.0</TargetFrameworks>
+    <TargetFrameworks>net5.0;net6.0;net7.0;net8.0</TargetFrameworks>
     <PackageTags>dotnet cli packaging rpm package installer</PackageTags>
     <Description>Create RPM packages (.rpm files) of your .NET Core projects straight from the command line.
 
@@ -10,11 +10,13 @@ Once you've installed this package as a .NET CLI tool, run dotnet rpm to generat
 See https://github.com/qmfrederik/dotnet-packaging/ for more information on how to use dotnet rpm.</Description>
     <PackAsTool>true</PackAsTool>
     <ToolCommandName>dotnet-rpm</ToolCommandName>
+    <Version>0.1.221</Version>
+    <PackageId>dotnet-rpm-net8</PackageId>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="System.CommandLine" Version="2.0.0-beta1.21308.1" />
-    <PackageReference Include="Microsoft.Build" Version="16.6.0" ExcludeAssets="runtime" />
     <PackageReference Include="Microsoft.Build.Locator" Version="1.4.1" />
+    <PackageReference Include="System.CommandLine" Version="2.0.0-beta1.21308.1" />
+    <PackageReference Include="Microsoft.Build" Version="17.9.5" ExcludeAssets="runtime" />
   </ItemGroup>
 </Project>

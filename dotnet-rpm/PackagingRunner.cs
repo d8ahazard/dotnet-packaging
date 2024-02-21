@@ -1,4 +1,3 @@
-using Microsoft.Build.Locator;
 using System;
 using System.Collections.Generic;
 using System.CommandLine;
@@ -11,10 +10,12 @@ using System.Runtime.Loader;
 using System.Text;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using Microsoft.Build.Locator;
 using ConsoleLogger = Microsoft.Build.Logging.ConsoleLogger;
 using IMSBuildLogger = Microsoft.Build.Framework.ILogger;
 using LoggerVerbosity = Microsoft.Build.Framework.LoggerVerbosity;
 using MSBuild = Microsoft.Build.Evaluation;
+
 
 namespace Dotnet.Packaging
 {

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<RuleSet Name="Rules for Quamotion.Automation" Description="Code analysis rules for Quamotion.Automation.csproj." ToolsVersion="14.0">
+<RuleSet Name="Rules for digitalhigh.Automation" Description="Code analysis rules for digitalhigh.Automation.csproj." ToolsVersion="14.0">
   <Include Path="basicdesignguidelinerules.ruleset" Action="Default" />
   <Rules AnalyzerId="AsyncUsageAnalyzers" RuleNamespace="AsyncUsageAnalyzers">
     <Rule Id="UseAsyncSuffix" Action="Hidden" />

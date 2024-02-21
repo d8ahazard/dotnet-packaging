@@ -3,9 +3,9 @@
     <OutputType>Exe</OutputType>
     <TargetFrameworks>netcoreapp1.0;netcoreapp2.0</TargetFrameworks>
     <VersionPrefix>0.1.1</VersionPrefix>
-    <Authors>Frederik Carlier</Authors>
-    <Company>Quamotion</Company>
-    <Copyright>Copyright (c) Frederik Carlier and Contributors</Copyright>
+    <Authors>digitalhigh</Authors>
+    <Company>digitalhigh</Company>
+    <Copyright>Copyright (c) digitalhigh and Contributors</Copyright>
     <PackageLicenseUrl>https://github.com/qmfrederik/dotnet-packaging/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/qmfrederik/dotnet-packaging/</PackageProjectUrl>
     <RepositoryUrl>https://github.com/qmfrederik/dotnet-packaging/</RepositoryUrl>
