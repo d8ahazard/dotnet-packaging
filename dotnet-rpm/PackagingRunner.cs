@@ -73,7 +73,7 @@ namespace Dotnet.Packaging
                 {
                     Name = "configuration",
                 });
-
+            
             rootCommand.AddOption(new Option(
                 new string[] { "-o", "--output" },
                 $"The output directory to place built packages in. The default is the output directory of your project.",
@@ -89,6 +89,11 @@ namespace Dotnet.Packaging
                 {
                     Name = "version-suffix"
                 });
+            
+            rootCommand.AddOption(new Option(
+                new string[] { "-s", "--self-contained" },
+                "Publish the .NET Core runtime with your application. The default is 'false'.",
+                arity: ArgumentArity.Zero));
 
             rootCommand.AddOption(new Option(
                 new string[] { "--no-restore" },
@@ -150,7 +155,7 @@ namespace Dotnet.Packaging
                     })
                 });
 
-            rootCommand.Handler = CommandHandler.Create<IConsole, string, string, string, string, string, bool, bool, string>((console, runtime, framework, configuration, output, versionSuffix, noRestore, verbose, project) =>
+            rootCommand.Handler = CommandHandler.Create<IConsole, string, string, string, string, string, bool, bool, bool, string>((console, runtime, framework, configuration, output, versionSuffix, selfContained, noRestore, verbose, project) =>
             {
                 console.Out.WriteLine($"dotnet {this.commandName} ({ThisAssembly.AssemblyInformationalVersion})");
 
@@ -161,6 +166,7 @@ namespace Dotnet.Packaging
                     console.Out.WriteLine($"{nameof(configuration)}: {configuration}");
                     console.Out.WriteLine($"{nameof(output)}: {output}");
                     console.Out.WriteLine($"{nameof(versionSuffix)}: {versionSuffix}");
+                    console.Out.WriteLine($"{nameof(selfContained)}: {selfContained}");
                     console.Out.WriteLine($"{nameof(noRestore)}: {noRestore}");
                     console.Out.WriteLine($"{nameof(verbose)}: {verbose}");
                 }
@@ -209,6 +215,11 @@ namespace Dotnet.Packaging
                 if (!string.IsNullOrWhiteSpace(output))
                 {
                     msbuildArguments.Append($"/p:PackageDir={output} ");
+                }
+                
+                if (selfContained)
+                {
+                    msbuildArguments.Append($"/p:SelfContained=true ");
                 }
 
                 msbuildArguments.Append($"{projectFilePath} ");

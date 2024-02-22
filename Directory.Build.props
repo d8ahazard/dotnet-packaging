@@ -20,9 +20,5 @@
   <ItemGroup>
     <PackageReference Include="NerdBank.GitVersioning" Version="3.2.31" PrivateAssets="All" />
     <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
-    <PackageReference Include="Packaging.Targets">
-      <Version>0.1.224-*</Version>
-      <PrivateAssets>all</PrivateAssets>
-    </PackageReference>
   </ItemGroup>
 </Project>
